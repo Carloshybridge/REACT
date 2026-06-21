@@ -1,25 +1,13 @@
-import Button from "./Button"; // Asegúrate de ajustar la ruta si tu carpeta es diferente
+import PasswordField from './PasswordField' // 1. Importamos el nuevo componente
+import './App.css'
 
-export default function App() {
+function App() {
   return (
-    <div style={{ padding: '20px', display: 'flex', gap: '10px', flexDirection: 'column', alignItems: 'flex-start' }}>
-      <h1>Prueba de Componente Button</h1>
-      
-      {/* Caso 1: Botón normal (rounded por defecto es false) */}
-      <div>
-        <p>Botón normal (Por defecto):</p>
-        <Button>
-          Descargar archivo
-        </Button>
-      </div>
-
-      {/* Caso 2: Botón completamente redondeado (rounded={true}) */}
-      <div>
-        <p>Botón con propiedad rounded activa:</p>
-        <Button rounded={true}>
-          Descargar archivo
-        </Button>
-      </div>
+    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+      {/* 2. Llamamos al componente para que se renderice */}
+      <PasswordField />
     </div>
-  );
+  )
 }
+
+export default App
